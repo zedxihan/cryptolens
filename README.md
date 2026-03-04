@@ -72,12 +72,13 @@ npm run dev
 
     src
     │
+    ├── assets
     ├── components
     │   ├── layout      # Sidebar + dashboard layout
     │   ├── ui          # Reusable UI components
     │   ├── cards       # Dashboard card components
     │   └── charts      # Chart components
-    │
+    ├── pages
     ├── App.jsx
     └── main.jsx
 
