@@ -3,16 +3,14 @@ import Topbar from "./Topbar";
 
 export default function DashboardLayout({ children }) {
   return (
-    <div className="min-h-screen flex bg-slate-50/50 font-sans text-slate-900" >
+    <div className="flex w-full max-w-[1400px] min-h-screen md:h-[90vh] md:min-h-[800px] bg-[#f8f9fa]
+                    md:rounded-[30px] overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.1)]">
       <Sidebar />
 
-      <div className="flex-1 flex flex-col">
+      <main className="grow flex flex-col px-4 py-3 md:px-8 md:py-4 overflow-y-auto bg-[#f8f9fa]">
         <Topbar />
-
-        <main className="flex-1 overflow-y-auto p-6 md:p-8 max-w-7xl mx-auto w-full">
-          {children}
-        </main>
-      </div>
+        {children}
+      </main>
     </div>
   );
 }
