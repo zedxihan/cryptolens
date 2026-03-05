@@ -57,7 +57,7 @@ export default function Sidebar() {
   }
   return (
     <div className="h-screen w-20 bg-[#121216] flex flex-col items-center
-                    justify-between py-8 border-r border-white/5">
+                    justify-between py-8 border-r border-white/5 fixed">
     <div className="flex flex-col items-center  gap-10">
 
       <img src={logo} className="w-12 h-12 cursor-pointer" alt="logo" />
