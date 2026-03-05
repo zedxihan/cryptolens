@@ -41,6 +41,7 @@ export default function Sidebar() {
 
     return (
       <button
+        type="button"
         onClick={() => setActive(item.id)}
         className={navItemClasses(isActive)}
         aria-label={item.id}
@@ -56,8 +57,8 @@ export default function Sidebar() {
     );
   }
   return (
-    <div className="h-screen w-20 bg-[#121216] flex flex-col items-center
-                    justify-between py-8 border-r border-white/5 fixed">
+    <div className="h-full w-16 md:w-20 bg-[#121216] flex flex-col items-center
+                    justify-between py-6 md:py-8 border-r border-white/5 shrink-0">
     <div className="flex flex-col items-center  gap-10">
 
       <img src={logo} className="w-12 h-12 cursor-pointer" alt="logo" />
@@ -71,6 +72,7 @@ export default function Sidebar() {
     </div>
 
     <button
+      type="button"
       onClick={() => setActive("settings")}
       className={navItemClasses(active === "settings")}
       aria-label="settings"
