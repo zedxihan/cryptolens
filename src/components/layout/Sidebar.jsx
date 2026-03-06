@@ -1,30 +1,22 @@
 import { useState } from "react";
 import logo from "../../assets/logo.svg";
 import {
-  HomeIcon,
-  ChartPieIcon,
-  ChartBarSquareIcon,
-  CalendarDaysIcon,
-  BriefcaseIcon,
-  ClockIcon,
-  Cog6ToothIcon
-}  from "@heroicons/react/24/outline";
-import { 
-  HomeIcon as HomeSolid,
-  ChartPieIcon as ChartPieSolid,
-  ChartBarSquareIcon as ChartBarSquareSolid,
-  CalendarDaysIcon as CalendarDaysSolid,
-  BriefcaseIcon as BriefcaseSolid,
-  ClockIcon as ClockSolid
-} from "@heroicons/react/24/solid";
+  Home,
+  PieChart,
+  BarChart2,
+  Calendar,
+  Briefcase,
+  Clock,
+  Settings
+} from "lucide-react";
 
 const navItems = [
-  { id: "dashboard", icon: HomeIcon, activeIcon: HomeSolid },
-  { id: "analytics", icon: ChartPieIcon, activeIcon: ChartPieSolid },
-  { id: "reports", icon: ChartBarSquareIcon, activeIcon: ChartBarSquareSolid },
-  { id: "calendar", icon: CalendarDaysIcon, activeIcon: CalendarDaysSolid },
-  { id: "portfolio", icon: BriefcaseIcon, activeIcon: BriefcaseSolid },
-  { id: "history", icon: ClockIcon, activeIcon: ClockSolid }
+  { id: "dashboard", icon: Home },
+  { id: "analytics", icon: PieChart },
+  { id: "reports", icon: BarChart2 },
+  { id: "calendar", icon: Calendar },
+  { id: "portfolio", icon: Briefcase },
+  { id: "history", icon: Clock }
 ];
 
 export default function Sidebar() {
@@ -37,7 +29,7 @@ export default function Sidebar() {
 
   const SidebarItem = ({item}) => {
     const isActive = active === item.id;
-    const Icon = isActive ? item.activeIcon : item.icon;
+    const Icon = item.icon;
 
     return (
       <button
@@ -46,7 +38,7 @@ export default function Sidebar() {
         className={navItemClasses(isActive)}
         aria-label={item.id}
       >
-        <Icon className={`w-6 h-6 transition-all duration-300 ${isActive ? "scale-110" : ""}`}/>
+        <Icon className={`w-5 h-5 transition-all duration-300 ${isActive ? "scale-110" : ""}`}/>
         
         {isActive && (
           <div className="absolute inset-0 bg-white/10 rounded-xl -z-10 animate-zoom-in" />)}
@@ -57,7 +49,7 @@ export default function Sidebar() {
     );
   }
   return (
-    <div className="h-full w-16 md:w-20 bg-[#121216] flex flex-col items-center
+    <div className="h-full w-22 bg-[#121216] flex flex-col items-center
                     justify-between py-6 md:py-8 border-r border-white/5 shrink-0">
     <div className="flex flex-col items-center  gap-10">
 
@@ -77,7 +69,7 @@ export default function Sidebar() {
       className={navItemClasses(active === "settings")}
       aria-label="settings"
     >
-      <Cog6ToothIcon className={`w-6 h-6 transition-all duration-300 ${active === "settings" 
+      <Settings className={`w-6 h-6 transition-all duration-300 ${active === "settings" 
                                 ? "scale-105" : ""}`} />
     </button>
 

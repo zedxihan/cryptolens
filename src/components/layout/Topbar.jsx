@@ -1,4 +1,4 @@
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import { Search } from "lucide-react";
 import logo from "../../assets/logo.svg";
 
 export default function Topbar() {
@@ -16,7 +16,7 @@ export default function Topbar() {
         <div className="order-3 md:order-2 flex items-center justify-self-center bg-slate-100 rounded-xl px-3 py-2 
                         w-full md:flex-1 md:max-w-md focus-within:ring-2 focus-within:ring-green-500">
           <label htmlFor="coin-search" className="sr-only">Search coins</label>
-          <MagnifyingGlassIcon className="w-5 h-5 text-slate-500" />
+          <Search className="w-5 h-5 text-slate-500" />
           <input
             id="coin-search"
             type="text"
