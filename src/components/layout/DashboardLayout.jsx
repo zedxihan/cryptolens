@@ -1,5 +1,6 @@
 import Sidebar from "./Sidebar";
 import Topbar from "./Topbar";
+import Footer from "./Footer";
 
 export default function DashboardLayout({ children }) {
   return (
@@ -10,6 +11,7 @@ export default function DashboardLayout({ children }) {
       <main className="grow flex flex-col px-4 py-3 md:px-8 md:py-4 overflow-y-auto bg-[#f8f9fa]">
         <Topbar />
         {children}
+        <Footer />
       </main>
     </div>
   );
