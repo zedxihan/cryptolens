@@ -8,7 +8,12 @@ import {
 const iconProps = { size: 18, strokeWidth: 4 };
 
 export default function CoinCard({ coin }) {
-  const change = coin.price_change_percentage_24h || 0;
+  
+  const change = Number(
+    coin.price_change_percentage_24h_in_currency ??
+    coin.price_change_percentage_24h ??
+    0
+  );
 
   //MiniChart polish
   let rawChartData = coin.sparkline_in_7d?.price?.slice(-24) || [];
@@ -44,12 +49,12 @@ export default function CoinCard({ coin }) {
           </span>
         </div>
 
-          <p className="mt-1 tect-sm font-medium tracking-tighter">
+          <p className="mt-1 text-sm font-medium">
             ${coin.current_price?.toLocaleString() || "N/A"}
           </p>
 
           <p className={`mt-1 flex items-center gap-0.5 text-sm font-medium ${
-            change >= 0 ? "text-emerald-500" : "text-red-500"}`}>
+            change >= 0 ? "text-price-green" : "text-price-red"}`}>
   
             {change >= 0 
               ? <ChevronUp {...iconProps} /> 
@@ -61,14 +66,14 @@ export default function CoinCard({ coin }) {
       {/* Right Side */}
       <div className="w-24 h-12">
 
-        <ResponsiveContainer width="100%" height="100%">
+        <ResponsiveContainer width="100%" height={48}>
           <LineChart
           data={chartData}
           margin={{ top: 6, right: 6, bottom: 6, left: 6 }}>
             <Line
               type="natural"
                 dataKey="price"
-                stroke={change >= 0 ? "#22c55e" : "#ef4444"}
+                stroke={change >= 0 ? "var(--color-price-green)" : "var(--color-price-red)"}
                 strokeWidth={2.3}
                 dot={false}
                 strokeLinecap="round"

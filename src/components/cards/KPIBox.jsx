@@ -30,7 +30,11 @@ export default function KPIBox({ title, icon, coins=[] }) {
 
         {visibleCoins.map((coin) => {
 
-          const change = coin.price_change_percentage_24h || 0;
+          const change = Number(
+            coin.price_change_percentage_24h_in_currency ??
+            coin.price_change_percentage_24h ??
+            0
+          );
 
           return(
             <div
@@ -54,7 +58,7 @@ export default function KPIBox({ title, icon, coins=[] }) {
                 </p>
 
                 <p className={`flex items-center gap-0.5 text-sm leading-none font-medium
-                                ${change >= 0 ? "text-emerald-500" : "text-red-500"}`}>
+                                ${change >= 0 ? "text-price-green" : "text-price-red"}`}>
                   {change >= 0 
                     ? <ChevronUp {...iconProps} /> 
                     : <ChevronDown {...iconProps} />}
