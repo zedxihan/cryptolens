@@ -3,7 +3,7 @@ import logo from "../../assets/logo.svg";
 
 export default function Topbar() {
   return (
-    <header className="w-full bg-white border-b border-slate-200 px-6 py-4 mb-6 rounded-lg">
+    <header className="w-full bg-white border-b border-slate-200 px-6 py-4 rounded-lg">
       <div className="mx-auto max-w-[1200px] grid grid-cols-1 md:grid-cols-[auto_1fr_auto] items-center gap-3 md:gap-6">
 
         {/* Logo */}
