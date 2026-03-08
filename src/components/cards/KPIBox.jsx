@@ -6,7 +6,6 @@ const iconProps = { size: 18, strokeWidth: 4 };
 export default function KPIBox({ title, icon, coins=[] }) {
 
   const [showAll, setShowAll] = useState(false); //disabled state
-
   const visibleCoins = showAll ? coins : coins.slice(0, 4);
 
   return(
@@ -30,11 +29,7 @@ export default function KPIBox({ title, icon, coins=[] }) {
 
         {visibleCoins.map((coin) => {
 
-          const change = Number(
-            coin.price_change_percentage_24h_in_currency ??
-            coin.price_change_percentage_24h ??
-            0
-          );
+          const change = Number(coin.price_change_percentage_24h ?? 0);
 
           return(
             <div
@@ -45,7 +40,11 @@ export default function KPIBox({ title, icon, coins=[] }) {
                 <img 
                   src={coin.image} 
                   alt={coin.name} 
-                  className="w-6 h-6" />
+                  className="w-6 h-6"
+                  onError={(e) => { 
+                  e.target.onerror = null;
+                  e.target.src = `https://ui-avatars.com/api/?name=${coin.name}&background=random&color=fff`; 
+                }} />
                 
                 <span className="text-sm font-medium">
                   {coin.name}

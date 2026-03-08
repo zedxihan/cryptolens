@@ -30,8 +30,8 @@ export default function MarketTableSection() {
                 </div>
               </td>
               <td className="py-4 px-4 text-slate-800 font-bold">$64,230.00</td>
-              <td className="py-4 px-4 text-emerald-500 font-medium">
-                <span className="flex items-center gap-1 bg-emerald-50 text-emerald-600 px-2 py-1 rounded-md text-xs w-max">
+              <td className="py-4 px-4 text-price-green font-medium">
+                <span className="flex items-center gap-1 bg-emerald-50 text-price-green px-2 py-1 rounded-md text-xs w-max">
                   <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
                   +2.4%
                 </span>
@@ -52,8 +52,8 @@ export default function MarketTableSection() {
                 </div>
               </td>
               <td className="py-4 px-4 text-slate-800 font-bold">$3,450.00</td>
-              <td className="py-4 px-4 text-rose-500 font-medium">
-                <span className="flex items-center gap-1 bg-rose-50 text-rose-600 px-2 py-1 rounded-md text-xs w-max">
+              <td className="py-4 px-4 text-price-red font-medium">
+                <span className="flex items-center gap-1 bg-rose-50 text-price-red px-2 py-1 rounded-md text-xs w-max">
                   <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" /></svg>
                   -1.2%
                 </span>

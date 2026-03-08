@@ -9,16 +9,12 @@ const iconProps = { size: 18, strokeWidth: 4 };
 
 export default function CoinCard({ coin }) {
   
-  const change = Number(
-    coin.price_change_percentage_24h_in_currency ??
-    coin.price_change_percentage_24h ??
-    0
-  );
+const change = Number(coin.price_change_percentage_24h ?? 0);
 
   //MiniChart polish
-  let rawChartData = coin.sparkline_in_7d?.price?.slice(-24) || [];
-
+  let rawChartData = coin.sparkline_in_1d?.price || [];
   let chartData = [];
+
   if (rawChartData.length > 1) {
     const minPrice = Math.min(...rawChartData);
     const maxPrice = Math.max(...rawChartData);

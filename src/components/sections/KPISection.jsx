@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import KPIBox from "../cards/KPIBox";
 import CoinCard from "../cards/CoinCard";
-import { getTrendingCoins, getTopGainers, getPopularFour } from "../../services/coingecko"
+import { getTrendingCoins, getTopGainers, getPopularFour } from "../../services/binanceService"
 
 export default function KPISection() {
 
@@ -29,7 +29,7 @@ export default function KPISection() {
   useEffect(() => {
     fetchData();
 
-    const intervalId = setInterval(fetchData, 60000);
+    const intervalId = setInterval(fetchData, 7000);
 
     // cleanup
     return () => {
@@ -48,7 +48,7 @@ export default function KPISection() {
           <CoinCard 
             key={coin.id}
             coin={coin}
-            chartData={coin.sparkline_in_7d?.price} />
+            chartData={coin.sparkline_in_1d?.price} />
           );
         })}
       </div>
