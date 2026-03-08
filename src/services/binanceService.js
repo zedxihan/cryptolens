@@ -1,4 +1,5 @@
-const BASE_URL = 'https://api.binance.com/api/v3';
+const GLOBAL_URL = 'https://api.binance.com/api/v3';
+const US_URL = 'https://api.binance.us/api/v3';
 
 //Symbol Cleaner
 const STABLECOINS = ['USDC', 'USDP', 'TUSD', 'PAX', 'DAI', 'EUR', 'GBP', 'FDUSD']
@@ -25,27 +26,32 @@ function formatTicker(ticker) {
 
 
 //Fetcher & error handler
-async function fetchJSON(url) {
+async function fetchJSON(path) {
     try {
-        const response = await fetch(url)
-        if (!response.ok) {
-            throw new Error(`Binance API error: ${response.status}`)
-        }
-        return response.json();
+        const response = await fetch(`${GLOBAL_URL}${path}`)
+        if (!response.ok) throw new Error('Global API blocked')
+        return await response.json();
 
-    } catch (error) {
-        console.error('Fetch error', error)
-        return[];
+    } catch {
+        try {
+            const response = await fetch(`${US_URL}${path}`)
+            if (!response.ok) throw new Error('US API blocked')
+            return await response.json();
+        } catch (error) {
+            
+            console.error('Fetch error:', error)
+            return [];
+        }
     }
 }
 
 //Popular Four
 export async function getPopularFour() {
     const POPULAR_COINS = ['BNBUSDT', 'SOLUSDT', 'AVAXUSDT', 'SUIUSDT'];
-    const tickers = await fetchJSON(`${BASE_URL}/ticker/24hr?symbols=${JSON.stringify(POPULAR_COINS)}`)
+    const tickers = await fetchJSON(`/ticker/24hr?symbols=${JSON.stringify(POPULAR_COINS)}`);
 
     const klinePromises = POPULAR_COINS.map(coin => 
-        fetchJSON(`${BASE_URL}/klines?symbol=${coin}&interval=1h&limit=24`)      
+        fetchJSON(`/klines?symbol=${coin}&interval=1h&limit=24`)
     )
     const allKlines = await Promise.all(klinePromises);
 
@@ -61,7 +67,7 @@ export async function getPopularFour() {
 
 //Trending Coins
 export async function getTrendingCoins() {
-    const tickers = await fetchJSON(`${BASE_URL}/ticker/24hr`)
+    const tickers = await fetchJSON('/ticker/24hr')
 
     return tickers
             .filter(t => validPair(t.symbol))
@@ -72,7 +78,7 @@ export async function getTrendingCoins() {
 
 //Top Gainers
 export async function getTopGainers() {
-    const tickers = await fetchJSON(`${BASE_URL}/ticker/24hr`);
+    const tickers = await fetchJSON('/ticker/24hr');
 
     return tickers
             .filter(t => {
