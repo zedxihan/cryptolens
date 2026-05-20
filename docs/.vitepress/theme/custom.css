@@ -1,0 +1,86 @@
+:root {
+  --vp-font-family-base:
+    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --vp-c-brand-1: #2a5c43;
+  --vp-c-brand-2: #367556;
+  --vp-c-brand-3: #1d4230;
+  --vp-c-brand-soft: rgba(42, 92, 67, 0.06);
+  --vp-c-bg: #fcfcfb;
+  --vp-c-bg-soft: #f4f4f3;
+  --vp-c-bg-mute: #e8e8e7;
+  --vp-c-bg-alt: #fcfcfb;
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-border: #e0e0df;
+  --vp-code-block-bg: #f4f4f3;
+  --vp-c-text-1: #1a1c1a;
+  --vp-c-text-2: #505551;
+  --vp-c-text-3: #7b817c;
+  --vp-home-hero-name-color: var(--vp-c-brand-1);
+  --vp-home-hero-name-background: none;
+}
+
+.dark {
+  --vp-c-brand-1: #82b398;
+  --vp-c-brand-2: #99c7ad;
+  --vp-c-brand-3: #6b9e83;
+  --vp-c-brand-soft: rgba(130, 179, 152, 0.08);
+  --vp-c-bg: #0f1110;
+  --vp-c-bg-soft: #161a18;
+  --vp-c-bg-mute: #202522;
+  --vp-c-bg-alt: #0f1110;
+  --vp-c-bg-elv: #1b201d;
+  --vp-c-border: #242b27;
+  --vp-code-block-bg: #161a18;
+  --vp-c-text-1: #d2d7d4;
+  --vp-c-text-2: #8f9993;
+  --vp-c-text-3: #656d68;
+  --vp-home-hero-image-background-image: radial-gradient(
+    circle,
+    rgba(130, 179, 152, 0.04) 0%,
+    transparent 60%
+  );
+}
+
+.VPNavBar .logo {
+  border-radius: 8px;
+  overflow: hidden;
+}
+.VPFeature {
+  border-radius: 16px !important;
+  transition: border-color 0.2s ease !important;
+  box-shadow: none !important;
+}
+.VPFeature:hover {
+  border-color: var(--vp-c-brand-1) !important;
+  background-color: var(--vp-c-bg-mute) !important;
+}
+.VPButton {
+  border-radius: 9999px !important;
+}
+@media (min-width: 960px) {
+  .dark .VPNavBarSearch button {
+    color: var(--vp-c-text-2) !important;
+    background: var(--vp-c-brand-soft) !important;
+    border-radius: 8px !important;
+  }
+}
+
+@media (min-width: 960px) {
+  .VPHome {
+    padding-bottom: 0;
+  }
+  .VPHome .VPHero {
+    padding-top: 120px;
+    padding-bottom: 40px;
+  }
+  .VPHome .VPHero .actions {
+    margin-top: 0px;
+  }
+  .VPHome .VPFeatures {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .VPFeature .box {
+    padding: 16px !important;
+  }
+}
