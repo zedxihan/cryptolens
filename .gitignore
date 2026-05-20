@@ -39,3 +39,7 @@ app-example
 # Worker
 .wrangler/
 .dev.vars
+
+# VitePress
+docs/.vitepress/dist
+docs/.vitepress/cache
