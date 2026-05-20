@@ -10,20 +10,20 @@ export default defineConfig({
     search: { provider: 'local' },
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Docs', link: '#' },
+      { text: 'Docs', link: '/guide/getting-started' },
       { text: 'Downloads', link: '/downloads' },
-      { text: 'Privacy', link: '#' },
-      { text: 'Terms', link: '#' },
+      { text: 'Privacy', link: '/privacy' },
+      { text: 'Terms', link: '/terms' },
     ],
     sidebar: {
       '/guide/': [
         {
           text: 'Docs',
           items: [
-            { text: 'Getting Started', link: '#' },
-            { text: 'Features', link: '#' },
-            { text: 'Configuration', link: '#' },
-            { text: 'Troubleshooting', link: '#' },
+            { text: 'Getting Started', link: '/guide/getting-started' },
+            { text: 'Configuration', link: '/guide/config' },
+            { text: 'Features', link: '/guide/features' },
+            { text: 'Troubleshooting', link: '/guide/troubleshooting' },
           ],
         },
       ],
@@ -31,8 +31,8 @@ export default defineConfig({
         {
           text: 'Legal',
           items: [
-            { text: 'Privacy Policy', link: '#' },
-            { text: 'Terms of Service', link: '#' },
+            { text: 'Privacy Policy', link: '/privacy' },
+            { text: 'Terms of Service', link: '/terms' },
           ],
         },
       ],

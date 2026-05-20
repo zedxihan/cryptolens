@@ -17,7 +17,7 @@ hero:
       link: https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/zedxihan/cryptolens
     - theme: alt
       text: Documentation
-      link: #
+      link: /guide/getting-started
 
 features:
   - icon: ⚡

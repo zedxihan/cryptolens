@@ -1,4 +1,7 @@
-<h1 align="center">CryptoLens</h1>
+<h1 align="center">
+<img src="docs/public/logo.svg" width="120"><br>
+CryptoLens
+</h1>
 <h3 align="center">A clean, modern, and distraction-free cryptocurrency monitoring dashboard </h3>
 
 <h1 align="center">
@@ -75,40 +78,13 @@ Track live prices, discover trending coins, analyze market sentiment, and monito
 - **Cloudflare Workers & KV** (Hono)
 - Data from **Binance**, **CoinGecko**, **SosoValue**, and **CMC**
 
-## Quick Start
+## 📚 Documentation & Quick Start
 
-### 1. Installation
+For detailed instructions on how to install, configure, and run CryptoLens (including setting up Worker), please refer to our official documentation site:
 
-```bash
-git clone https://github.com/zedxihan/cryptolens.git
-cd cryptolens && bun install
-```
+👉 **[CryptoLens Documentation Site](https://zedxihan.github.io/cryptolens)**
 
-### 2. Backend (Worker)
-
-Create `worker/.dev.vars` with your keys (`APP_SECRET`, `CG_KEY`, etc.).  
-_Note: Use **APP_SECRET** for the worker, not `EXPO_PUBLIC_APP_SECRET`._
-
-```bash
-cd worker && bunx wrangler dev --ip 0.0.0.0
-```
-
-### 3. Frontend (App)
-
-Create a `.env` file in the root. If using a physical device, use your **local IP** for the API URL:
-
-```env
-EXPO_PUBLIC_API_URL=http://<YOUR_LOCAL_IP>:8787
-EXPO_PUBLIC_APP_SECRET=<YOUR_SECRET_KEY> #same APP_SECRET key
-```
-
-### 4. Run App
-
-```bash
-bun expo start
-```
-
-Scan the QR code with **Expo Go** to begin.
+_(If you are running the project locally, you can view the docs by running `bun run docs:dev`)_
 
 ## 🗺 Roadmap
 

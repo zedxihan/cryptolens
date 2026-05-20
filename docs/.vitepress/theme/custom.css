@@ -57,17 +57,29 @@
 .VPButton {
   border-radius: 9999px !important;
 }
+
 @media (min-width: 960px) {
+  html:has(.VPHome),
+  html:has(.VPHome) body {
+    overflow: hidden !important;
+    height: 100dvh !important;
+  }
+
+  .VPHome {
+    height: calc(100dvh - var(--vp-nav-height));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
   .dark .VPNavBarSearch button {
     color: var(--vp-c-text-2) !important;
     background: var(--vp-c-brand-soft) !important;
     border-radius: 8px !important;
-  }
-}
-
-@media (min-width: 960px) {
-  .VPHome {
-    padding-bottom: 0;
   }
   .VPHome .VPHero {
     padding-top: 120px;
