@@ -41,21 +41,20 @@ Track live prices, discover trending coins, analyze market sentiment, and monito
 ## Downloads
 
 <p align="center">
-
-  <a href="https://github.com/zedxihan/cryptolens/releases/latest">
-    <img src="https://img.shields.io/github/v/release/zedxihan/cryptolens?style=for-the-badge&logoColor=168b94&label=Stable&labelColor=00ffff&color=0d1117" alt="Latest Stable Release"/>
+  <a href="https://github.com/zedxihan/cryptolens/releases">
+    <img src="https://img.shields.io/github/v/release/zedxihan/cryptolens?style=for-the-badge&logo=github&label=Version&color=6366f1" alt="Latest Version" />
   </a>
-  <a href="https://github.com/zedxihan/cryptolens/releases/">
-    <img src="https://img.shields.io/github/v/release/zedxihan/cryptolens?style=for-the-badge&include_prereleases&logoColor=087a87&label=Beta&labelColor=00ffff&color=0d1117" alt="Latest Pre-release"/>
+  <a href="https://cryptolens.link/downloads">
+    <img src="https://img.shields.io/github/downloads/zedxihan/cryptolens/total?style=for-the-badge&logo=cloud&label=Downloads&color=10b981" alt="Total Downloads" />
   </a>
-  <br/>
-   <a href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/zedxihan/cryptolens"><img src="https://raw.githubusercontent.com/ImranR98/Obtainium/main/assets/graphics/badge_obtainium.png" alt="Get it on Obtainium" width="160"/>
-   </a>
-
+  <br />
+  <a href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/zedxihan/cryptolens">
+    <img src="https://raw.githubusercontent.com/ImranR98/Obtainium/main/assets/graphics/badge_obtainium.png" alt="Get it on Obtainium" width="160" />
+  </a>
 </p>
 
 > [!NOTE]
-> Download, test, and share feedback or issues.
+> For direct APK downloads, setup guides, and QR codes to scan on your computer, check out the official [Downloads Page](https://cryptolens.link/downloads).
 
 ## Features
 
@@ -78,13 +77,19 @@ Track live prices, discover trending coins, analyze market sentiment, and monito
 - **Cloudflare Workers & KV** (Hono)
 - Data from **Binance**, **CoinGecko**, **SosoValue**, and **CMC**
 
-## 📚 Documentation & Quick Start
+## Contributing
 
-For detailed instructions on how to install, configure, and run CryptoLens (including setting up Worker), please refer to our official documentation site:
+Contributions of all kinds are welcome! Whether you want to fix bugs, add new features, improve documentation, or translate content.
 
-👉 **[CryptoLens Documentation Site](https://zedxihan.github.io/cryptolens)**
+To get started:
 
-_(If you are running the project locally, you can view the docs by running `bun run docs:dev`)_
+1. **Explore the Docs**: Want to understand the architecture, project structure, or how to set up the serverless backend? Check out our official documentation:
+
+   <a href="https://cryptolens.link/guide/getting-started" target="_blank" rel="noopener noreferrer">
+     <img src="https://img.shields.io/badge/Documentation-blueviolet?label=View%20on&style=for-the-badge&logo=read-the-docs&logoColor=white" alt="Documentation" />
+   </a>
+
+2. **Submit a Pull Request**: Check out the codebase, make your improvements, and submit a PR!
 
 ## 🗺 Roadmap
 
@@ -95,10 +100,6 @@ _(If you are running the project locally, you can view the docs by running `bun 
 - [ ] **Price Alerts:** Instant custom push notifications.
 - [ ] **Crypto Calendar:** Track ICOs and major events.
 - [ ] **App Store Release:** Optimized iOS & Android builds.
-
-## Contributing
-
-Contributions are welcome! Feel free to submit a Pull Request.
 
 ## License
 

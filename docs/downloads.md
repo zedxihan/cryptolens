@@ -8,14 +8,16 @@ Download the latest version of CryptoLens for your mobile device. Choose from th
 
 ### 1. Direct APK Download (Recommended)
 
-You can download the compiled Android application package (APK) directly from the GitHub releases page.
+You can download the compiled Android application package (APK) directly from the GitHub releases page. Select the package that matches your device's CPU architecture:
 
-::: info Latest Stable Release
+::: info Latest Stable Release (v0.3.0)
 
 - **Source:** GitHub Releases
-- **Platform:** Android (ARM64 APK)
-- **Link:** [Download Stable APK](https://github.com/zedxihan/cryptolens/releases/download/v0.3.0/cryptolens-v0.3.0-arm64-v8a.apk)
-  :::
+- **Platform:** Android (arm64-v8a APK)
+- **Link:** [Download Stable APK (v0.3.0)][dl-arm64]
+- **Other Architectures (v0.3.0):** [armeabi-v7a][dl-armv7] | [x86_64][dl-x86] | [Universal][dl-universal]
+
+:::
 
 ::: warning Beta Releases
 If you want to try out experimental features before they are officially released, you can browse pre-releases:
@@ -62,3 +64,8 @@ If you are installing the APK directly for the first time, your device may show 
 2. Tap the downloaded file.
 3. If prompted, toggle **"Allow installation from unknown sources"** for your browser or file manager.
 4. Tap **Install** and launch the app.
+
+[dl-arm64]: https://github.com/zedxihan/cryptolens/releases/download/v0.3.0/cryptolens-v0.3.0-arm64-v8a.apk
+[dl-armv7]: https://github.com/zedxihan/cryptolens/releases/download/v0.3.0/cryptolens-v0.3.0-armeabi-v7a.apk
+[dl-x86]: https://github.com/zedxihan/cryptolens/releases/download/v0.3.0/cryptolens-v0.3.0-x86_64.apk
+[dl-universal]: https://github.com/zedxihan/cryptolens/releases/download/v0.3.0/cryptolens-v0.3.0-universal.apk
