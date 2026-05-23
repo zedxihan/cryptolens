@@ -1,4 +1,11 @@
+import { readFileSync } from 'fs';
+import { resolve } from 'path';
 import { defineConfig } from 'vitepress';
+
+// Read version from package.json dynamically
+const version = JSON.parse(
+  readFileSync(resolve(process.cwd(), 'package.json'), 'utf-8'),
+).version;
 
 export default defineConfig({
   title: 'CryptoLens',
@@ -15,7 +22,7 @@ export default defineConfig({
       { text: 'Privacy', link: '/privacy' },
       { text: 'Terms', link: '/terms' },
       {
-        text: 'v0.3.0',
+        text: `v${version}`,
         link: 'https://github.com/zedxihan/cryptolens/releases',
       },
     ],
@@ -49,6 +56,16 @@ export default defineConfig({
         },
         link: 'https://patreon.com/zedxihan',
         ariaLabel: 'Patreon',
+      },
+    ],
+  },
+  vite: {
+    plugins: [
+      {
+        name: 'replace-version',
+        enforce: 'pre',
+        transform: (code, id) =>
+          id.includes('.md') ? code.replace(/__VERSION__/g, version) : code,
       },
     ],
   },

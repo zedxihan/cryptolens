@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: Download APK
-      link: https://github.com/zedxihan/cryptolens/releases/download/v0.3.1/cryptolens-v0.3.1-arm64-v8a.apk
+      link: https://github.com/zedxihan/cryptolens/releases/download/v__VERSION__/cryptolens-v__VERSION__-arm64-v8a.apk
     - theme: alt
       text: Obtainium
       link: https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/zedxihan/cryptolens
