@@ -15,7 +15,7 @@ CryptoLens
 <img src="https://img.shields.io/github/last-commit/zedxihan/cryptolens?style=for-the-badge&logo=git&labelColor=11140F&color=BBE9AA">
 </a>
 <br>
-<img src="https://skillicons.dev/icons?i=react,ts,tailwind,babel,bun">
+<img src="https://skillicons.dev/icons?i=react,ts,tailwind,bun,cloudflare">
 </h1>
 
 > [!WARNING]  
@@ -69,7 +69,7 @@ Track live prices, discover trending coins, analyze market sentiment, and monito
 
 ## Tech Stack
 
-- **React Native** (Expo 55)
+- **React Native** (Expo 56)
 - **TypeScript**
 - **NativeWind v5** (Tailwind CSS v4)
 - **Zustand** (Global state management)

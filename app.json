@@ -2,7 +2,7 @@
   "expo": {
     "name": "CryptoLens",
     "slug": "cryptolens",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "cryptolens",
@@ -17,7 +17,7 @@
         "backgroundColor": "#060c0a"
       },
       "package": "com.zedxihan.cryptolens",
-      "versionCode": 3,
+      "versionCode": 4,
       "predictiveBackGestureEnabled": false
     },
     "plugins": [
