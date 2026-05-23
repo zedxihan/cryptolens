@@ -12,7 +12,8 @@ At CryptoLens, we believe in privacy as a fundamental right. This Privacy Policy
 
 - **Current State (No Accounts):** You do not need to create an account, log in, or provide any personal details to use the core application. Your settings are saved directly on your local device storage (`AsyncStorage`).
 - **Future Updates (Accounts & Databases):** We plan to introduce optional user accounts and database synchronization in future updates. At that time, we may collect minimal necessary information (such as an email address) to facilitate login and data syncing. Any such data collection will be strictly optional and transparent.
-- **No Analytics:** We do not embed telemetry trackers, advertising IDs, crashlytics reporting, or analytical scripts in our client-side application.
+- **Client-Side:** We do not embed telemetry trackers, advertising IDs, crashlytics reporting, or analytical scripts in our client-side application.
+- **Server-Side Analytics:** Our backend API uses an anonymous analytics engine to count daily active users and monitor endpoint usage. This system strictly relies on anonymous identifiers generated on your device (or no identifier at all). We do **not** log or store your IP address or any Personally Identifiable Information (PII) for analytics purposes.
 
 ---
 
