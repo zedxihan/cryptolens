@@ -43,12 +43,13 @@ app.use('*', async (c, next) => {
 app.use('*', async (c, next) => {
   if (c.env.ANALYTICS) {
     const userId =
-      c.req.header('x-user-id') || c.req.header('x-device-id') || 'anonymous';
+      c.req.header('x-user-id') || c.req.header('x-device-id') || 'N/A';
 
     c.env.ANALYTICS.writeDataPoint({
       indexes: [userId],
       blobs: [
-        c.req.header('x-device-id') || 'unknown',
+        c.req.header('x-device-id') || 'N/A',
+        c.req.header('x-app-version') || 'N/A',
         new URL(c.req.url).pathname,
       ],
       doubles: [1],
