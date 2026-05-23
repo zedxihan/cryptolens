@@ -58,6 +58,12 @@
         "projectId": "8a785b78-ed20-4fea-9d2a-f17dc0e3770f"
       }
     },
-    "owner": "cryptolens-org"
+    "owner": "cryptolens-org",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/8a785b78-ed20-4fea-9d2a-f17dc0e3770f"
+    }
   }
 }
