@@ -11,3 +11,7 @@ enabled = true
 
 [observability.logs]
 invocation_logs = true
+
+[[analytics_engine_datasets]]
+binding = "ANALYTICS"
+dataset = "cryptolens_users"

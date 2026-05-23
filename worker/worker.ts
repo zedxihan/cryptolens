@@ -39,6 +39,24 @@ app.use('*', async (c, next) => {
   await next();
 });
 
+// Anonymous analytics
+app.use('*', async (c, next) => {
+  if (c.env.ANALYTICS) {
+    const userId =
+      c.req.header('x-user-id') || c.req.header('x-device-id') || 'anonymous';
+
+    c.env.ANALYTICS.writeDataPoint({
+      indexes: [userId],
+      blobs: [
+        c.req.header('x-device-id') || 'unknown',
+        new URL(c.req.url).pathname,
+      ],
+      doubles: [1],
+    });
+  }
+  await next();
+});
+
 // global error handler
 app.onError((err, c) => {
   console.error(`[Worker Error]: ${err.message}`);

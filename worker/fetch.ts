@@ -6,6 +6,7 @@ export interface Env {
   APP_SECRET?: string;
   VERSION?: string;
   ICONS: KVNamespace;
+  ANALYTICS: AnalyticsEngineDataset;
 }
 
 export interface RouteConfig {
