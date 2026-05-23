@@ -1,7 +1,7 @@
 import { formatCompact, formatPrice } from '@/utils/format';
 import { scaleLinear, scaleTime } from 'd3-scale';
 import * as d3 from 'd3-shape';
-import { useId, useMemo, useRef, useState } from 'react';
+import { useId, useMemo, useState } from 'react';
 import { Animated, PanResponder, Text, View } from 'react-native';
 import Svg, {
   Circle,
@@ -24,8 +24,8 @@ export default function AreaChart({
   const [plotW, setPlotW] = useState(0);
   const [hoverX, setHoverX] = useState<number | null>(null);
 
-  const animX = useRef(new Animated.Value(0)).current;
-  const animY = useRef(new Animated.Value(0)).current;
+  const [animX] = useState(() => new Animated.Value(0));
+  const [animY] = useState(() => new Animated.Value(0));
 
   const isMcap = dataKey === 'market_cap' || dataKey === 'marketCap';
   const fmtV = (v: number) =>
