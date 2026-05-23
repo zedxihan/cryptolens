@@ -1,5 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';
+import * as Crypto from 'expo-crypto';
 import Constants from 'expo-constants';
 
 const BASE_URL = process.env.EXPO_PUBLIC_API_URL;
@@ -11,7 +12,7 @@ const getDeviceId = async () => {
   if (cachedDeviceId) return cachedDeviceId;
   cachedDeviceId =
     (await AsyncStorage.getItem('device_id')) ||
-    crypto.randomUUID().slice(0, 23);
+    Crypto.randomUUID().slice(0, 23);
   AsyncStorage.setItem('device_id', cachedDeviceId);
   return cachedDeviceId;
 };

@@ -64,7 +64,7 @@ const ActionButton = ({
   textClassName = '',
   onClose,
 }: ActionButtonProps) => {
-  const containerClasses = `group w-full flex-row items-center justify-start gap-3 rounded-xl border border-border-2 bg-surface-2 px-4 py-3 transition-all active:scale-95 ${className}`;
+  const containerClasses = `group w-full flex-row items-center justify-start gap-3 rounded-xl border border-border-2 bg-surface-2 px-4 py-3 transition-all ${className}`;
   const textClasses = `font-pmedium text-base text-text transition-colors ${textClassName}`;
 
   return (
@@ -74,6 +74,7 @@ const ActionButton = ({
         onClose();
       }}
       className={containerClasses}
+      style={({ pressed }) => [pressed && { transform: [{ scale: 0.95 }] }]}
     >
       {({ pressed }) => {
         const iconColor = pressed ? activeColor : color;
@@ -132,7 +133,10 @@ export default function MobileDrawer({
                   if (item.url) Linking.openURL(item.url);
                   onClose();
                 }}
-                className="border-border-2 bg-surface-2 h-14 flex-1 items-center justify-center rounded-xl border transition-all active:scale-95 active:bg-white/5"
+                className="border-border-2 bg-surface-2 h-14 flex-1 items-center justify-center rounded-xl border transition-all active:bg-white/5"
+                style={({ pressed }) => [
+                  pressed && { transform: [{ scale: 0.95 }] },
+                ]}
               >
                 <item.icon size={20} color="#86a79b" />
               </Pressable>

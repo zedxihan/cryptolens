@@ -10,12 +10,12 @@ Download the latest version of CryptoLens for your mobile device. Choose from th
 
 You can download the compiled Android application package (APK) directly from the GitHub releases page. Select the package that matches your device's CPU architecture:
 
-::: info Latest Stable Release (v0.3.0)
+::: info Latest Stable Release (v0.3.1)
 
 - **Source:** GitHub Releases
 - **Platform:** Android (arm64-v8a APK)
-- **Link:** [Download Stable APK (v0.3.0)][dl-arm64]
-- **Other Architectures (v0.3.0):** [armeabi-v7a][dl-armv7] | [x86_64][dl-x86] | [Universal][dl-universal]
+- **Link:** [Download Stable APK (v0.3.1)][dl-arm64]
+- **Other Architectures (v0.3.1):** [armeabi-v7a][dl-armv7] | [x86_64][dl-x86] | [Universal][dl-universal]
 
 :::
 
@@ -50,7 +50,7 @@ If you want to try out experimental features before they are officially released
 If you are reading this on a computer, open your phone's camera and scan the QR code below to instantly download the APK.
 
 <p align="center" style="margin-top: 1rem;">
-  <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&color=000000&bgcolor=ffffff&margin=1&data=https://github.com/zedxihan/cryptolens/releases/download/v0.3.0/cryptolens-v0.3.0-arm64-v8a.apk" alt="Download APK QR Code" width="180" height="180" style="border-radius: 8px; border: 4px solid white; background: white;" />
+  <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&color=000000&bgcolor=ffffff&margin=1&data=https://github.com/zedxihan/cryptolens/releases/download/v0.3.1/cryptolens-v0.3.1-arm64-v8a.apk" alt="Download APK QR Code" width="180" height="180" style="border-radius: 8px; border: 4px solid white; background: white;" />
 </p>
 :::
 
@@ -65,7 +65,7 @@ If you are installing the APK directly for the first time, your device may show 
 3. If prompted, toggle **"Allow installation from unknown sources"** for your browser or file manager.
 4. Tap **Install** and launch the app.
 
-[dl-arm64]: https://github.com/zedxihan/cryptolens/releases/download/v0.3.0/cryptolens-v0.3.0-arm64-v8a.apk
-[dl-armv7]: https://github.com/zedxihan/cryptolens/releases/download/v0.3.0/cryptolens-v0.3.0-armeabi-v7a.apk
-[dl-x86]: https://github.com/zedxihan/cryptolens/releases/download/v0.3.0/cryptolens-v0.3.0-x86_64.apk
-[dl-universal]: https://github.com/zedxihan/cryptolens/releases/download/v0.3.0/cryptolens-v0.3.0-universal.apk
+[dl-arm64]: https://github.com/zedxihan/cryptolens/releases/download/v0.3.1/cryptolens-v0.3.1-arm64-v8a.apk
+[dl-armv7]: https://github.com/zedxihan/cryptolens/releases/download/v0.3.1/cryptolens-v0.3.1-armeabi-v7a.apk
+[dl-x86]: https://github.com/zedxihan/cryptolens/releases/download/v0.3.1/cryptolens-v0.3.1-x86_64.apk
+[dl-universal]: https://github.com/zedxihan/cryptolens/releases/download/v0.3.1/cryptolens-v0.3.1-universal.apk

@@ -1,9 +1,6 @@
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import { withLayoutContext } from 'expo-router';
+import TopTabs from 'expo-router/js-top-tabs';
 import { View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-
-const TopTabs = withLayoutContext(createMaterialTopTabNavigator().Navigator);
 
 export default function MarketsTabLayout() {
   const insets = useSafeAreaInsets();
