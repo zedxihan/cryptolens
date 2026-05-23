@@ -37,7 +37,16 @@
       "expo-font",
       "expo-image",
       "expo-web-browser",
-      "./plugins/withSeparateBuilds"
+      "./plugins/withSeparateBuilds",
+      "expo-status-bar",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usePrecompiledHeaders": true
+          }
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true,
