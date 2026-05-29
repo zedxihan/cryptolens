@@ -1,3 +1,12 @@
+---
+title: Getting Started with CryptoLens
+description: Set up CryptoLens for development or self-hosting, including the React Native app and Cloudflare Workers proxy.
+head:
+  - - meta
+    - name: keywords
+      content: cryptolens setup, cryptolens development, cryptolens guide, cloudflare workers deployment
+---
+
 # Getting Started
 
 Welcome to **CryptoLens**, a clean, modern, and distraction-free cryptocurrency monitoring dashboard.

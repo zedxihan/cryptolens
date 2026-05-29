@@ -1,3 +1,12 @@
+---
+title: Download CryptoLens APK
+description: Get the latest release and APK downloads for CryptoLens on Android, including automatic updates via Obtainium.
+head:
+  - - meta
+    - name: keywords
+      content: cryptolens apk, download cryptolens, install cryptolens, cryptolens obtainium, crypto app apk
+---
+
 # Downloads
 
 Download the latest version of CryptoLens for your mobile device. Choose from the available options below based on your preferred installation method.

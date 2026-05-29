@@ -1,5 +1,11 @@
 ---
 layout: home
+title: CryptoLens - Distraction-Free Crypto Dashboard
+description: Live cryptocurrency prices, historical ETF flows, and fear & greed sentiment tracker in a clean, high-performance dashboard.
+head:
+  - - meta
+    - name: keywords
+      content: cryptolens, crypto dashboard, crypto portfolio, btc price, btc etf flow, fear and greed index, crypto live prices, crypto tracker
 
 hero:
   name: 'CryptoLens'

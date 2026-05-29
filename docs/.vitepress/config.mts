@@ -11,6 +11,10 @@ export default defineConfig({
   title: 'CryptoLens',
   description:
     'A clean, modern, and distraction-free cryptocurrency monitoring dashboard',
+  cleanUrls: true,
+  sitemap: {
+    hostname: 'https://cryptolens.link',
+  },
   head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }]],
   themeConfig: {
     logo: '/logo.svg',
