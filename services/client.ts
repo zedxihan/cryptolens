@@ -1,5 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import axios from 'axios';
+import { create } from 'axios';
 import * as Crypto from 'expo-crypto';
 import Constants from 'expo-constants';
 
@@ -17,7 +17,7 @@ const getDeviceId = async () => {
   return cachedDeviceId;
 };
 
-export const apiClient = axios.create({
+export const apiClient = create({
   baseURL: BASE_URL,
   timeout: 10000,
   headers: {
@@ -34,25 +34,15 @@ apiClient.interceptors.request.use(async (config) => {
   return config;
 });
 
-apiClient.interceptors.response.use(
-  (response) => response,
-
-  (error) => {
-    if (error.response) {
-      console.error(
-        `API Error ${error.response.status}: ${error.response.data}`,
-      );
-    } else if (error.request) {
-      console.error('API Error: No response received from server');
-    } else {
-      console.error(`API Error: ${error.message}`);
-    }
-
-    return Promise.reject(error);
-  },
-);
-
 export async function fetchGet<T>(url: string): Promise<T> {
-  const response = await apiClient.get<T>(url);
-  return response.data;
+  return apiClient
+    .get<T>(url)
+    .then((response) => response.data)
+    .catch((error) => {
+      console.error(
+        `API Error${error.response ? ` ${error.response.status}` : ''}:`,
+        error.response?.data?.error || error.message,
+      );
+      throw error;
+    });
 }

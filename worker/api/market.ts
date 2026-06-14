@@ -5,7 +5,7 @@ import { resolveIcon } from './coingecko';
 
 const app = new Hono<{ Bindings: Env }>();
 
-const useStats = (
+const getStats = (
   c: Context<{ Bindings: Env }>,
   routeKey: string,
   ttl: number,
@@ -17,7 +17,7 @@ const useStats = (
 
 // cmc
 app.get('/indicators', async (c) => {
-  const fetch = useStats(c, '/cmc', 10800); // 3hr
+  const fetch = getStats(c, '/cmc', 10800); // 3hr
 
   const [fearRes, altRes] = await Promise.all([
     fetch<{
@@ -47,7 +47,7 @@ app.get('/indicators', async (c) => {
 const ETF_SYMBOLS = ['btc', 'eth'];
 
 app.get('/etf-flows', async (c) => {
-  const fetch = useStats(c, '/sosovalue', 21600); // 6hr
+  const fetch = getStats(c, '/sosovalue', 21600); // 6hr
 
   const data = await Promise.all(
     ETF_SYMBOLS.map(async (asset) => {
@@ -58,7 +58,7 @@ app.get('/etf-flows', async (c) => {
         resolveIcon(c, asset),
       ]);
 
-      const history = res.data
+      const history = (res.data || [])
         .filter((h, i, self) => !i || h.date !== self[i - 1].date)
         .slice(0, 5)
         .map((h) => ({

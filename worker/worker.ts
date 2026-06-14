@@ -2,7 +2,6 @@ import { Hono } from 'hono';
 import { cache } from 'hono/cache';
 import { cors } from 'hono/cors';
 
-import binanceApp from './api/binance';
 import coingeckoApp from './api/coingecko';
 import marketApp from './api/market';
 
@@ -66,7 +65,6 @@ app.onError((err, c) => {
 
 // API routes
 app.route('/api/coingecko', coingeckoApp);
-app.route('/api/binance', binanceApp);
 app.route('/api/market', marketApp);
 
 // proxy routes

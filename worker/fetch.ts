@@ -30,8 +30,6 @@ export const ROUTES: Record<string, RouteConfig> = {
     keyHeader: 'x-cg-demo-api-key',
     envKey: 'CG_KEY',
   },
-  '/binance': { base: 'https://data-api.binance.vision/api/v3', ttl: 5 },
-  '/binancef': { base: 'https://fapi.binance.com', ttl: 5 },
   '/cmc': {
     base: 'https://pro-api.coinmarketcap.com',
     ttl: 60,

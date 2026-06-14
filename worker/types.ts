@@ -1,11 +1,3 @@
-// Binance Upstream Types
-export interface RawTicker {
-  symbol: string;
-  lastPrice: string;
-  quoteVolume: string;
-  priceChangePercent: string;
-}
-
 export interface FormattedTicker {
   id: string;
   symbol: string;
@@ -29,8 +21,8 @@ export interface RawGlobalRes {
 }
 
 export interface RawChartRes {
-  market_caps: Array<[number, number]>;
-  total_volumes: Array<[number, number]>;
+  market_caps: [number, number][];
+  total_volumes: [number, number][];
 }
 
 export interface RawCoinRes {
@@ -46,13 +38,13 @@ export interface RawCoinRes {
 }
 
 export interface RawSearchRes {
-  coins: Array<{
+  coins: {
     id: string;
     name: string;
     symbol: string;
     large: string;
     thumb: string;
-  }>;
+  }[];
 }
 
 export interface RawSimplePriceRes {

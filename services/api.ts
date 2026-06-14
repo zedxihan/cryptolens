@@ -25,19 +25,19 @@ export const searchCoins = (query: string): Promise<Coin[]> => {
   );
 };
 
-// Binance
+// CoinGecko
 export const getTrendingCoins = (limit?: number): Promise<FormattedTicker[]> =>
   fetchGet<FormattedTicker[]>(
-    `api/binance/trending${limit ? `?limit=${limit}` : ''}`,
+    `api/coingecko/trending${limit ? `?limit=${limit}` : ''}`,
   );
 
 export const getTopGainers = (limit?: number): Promise<FormattedTicker[]> =>
   fetchGet<FormattedTicker[]>(
-    `api/binance/gainers${limit ? `?limit=${limit}` : ''}`,
+    `api/coingecko/gainers${limit ? `?limit=${limit}` : ''}`,
   );
 
 export const getPopularFour = (): Promise<FormattedTicker[]> =>
-  fetchGet<FormattedTicker[]>('api/binance/popular');
+  fetchGet<FormattedTicker[]>('api/coingecko/popular');
 
 // Market
 export const getMarketIndicators = (): Promise<MarketIndicators | null> =>

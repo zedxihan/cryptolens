@@ -4,12 +4,12 @@ export interface DashboardData {
     total_volume: number;
     mcap_change_percentage_24h: number;
   };
-  dominance: Array<{
+  dominance: {
     symbol: string;
     value: number;
     image: string;
-  }>;
-  chart: Array<{ timestamp: number; market_cap: number; volume: number }>;
+  }[];
+  chart: { timestamp: number; market_cap: number; volume: number }[];
 }
 
 export interface Coin {

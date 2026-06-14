@@ -45,7 +45,7 @@ const CoinRowComponent = ({ coin, rank, onPress }: CoinRowProps) => {
           <Text className="text-muted font-pmedium text-sm">
             {market_cap
               ? `${formatCompact(market_cap)} | ${formatCompact(total_volume)}`
-              : `bVol ${formatCompact(total_volume)}`}
+              : `Vol ${formatCompact(total_volume)}`}
           </Text>
         </View>
       </View>

@@ -23,7 +23,7 @@ CryptoLens
 >
 > **No Liability:** Users are solely responsible for their financial decisions. The developer assumes no liability for data inaccuracies, financial losses, or misuse of the application.
 >
-> **Regional Restrictions:** The app relies on the Binance API for live data. Users in restricted regions (such as the US) may experience connection errors and are responsible for complying with their local regulations.
+> **Regional Restrictions:** The app relies on Binance WebSockets for real-time price updates. Users in restricted regions (such as the US) may experience connection errors and are responsible for complying with their local regulations.
 
 ## 💖 Support Us
 

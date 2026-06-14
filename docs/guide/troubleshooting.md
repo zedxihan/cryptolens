@@ -22,20 +22,23 @@ You start the Expo development server, scan the QR code, but the app fails to lo
 
 ---
 
-## 🚫 Regional API Failures (Binance API)
+## 🚫 Regional Price Streaming Failures (Binance WebSockets)
 
 ### The Issue
 
-The app loads and the interface shows up, but you see errors like `Network request failed` or no charts and price updates load.
+The coin lists and dashboard load successfully, but real-time price updates (flashing green/red) do not start or stop updating.
 
 ### Why it Happens
 
-CryptoLens streams live prices directly from the **Binance WebSockets API**. Binance blocks access from certain jurisdictions, including the United States.
+There are two common reasons live price updates (flashing red/green) fail:
+
+1. **Regional Geo-blocking**: CryptoLens streams live price updates directly from the **Binance WebSockets API** on your device. Binance blocks websocket connections originating from certain jurisdictions, such as the United States.
+2. **Asset Not Listed on Binance**: Some trending or low-cap coins from CoinGecko are not traded on Binance. Since Binance has no market data or websocket feeds for these pairs, their price will remain static.
 
 ### How to Fix
 
 - **Use a VPN:** Connect your mobile device (or development machine if testing on a simulator) to a VPN location where Binance operates (such as Europe or Asia).
-- **Check Status Codes:** If you see a `451 Unavailable For Legal Reasons` status, this confirms a geo-block is active.
+- **Verify Network:** Ensure your network does not have firewall rules blocking port `9443` (Binance WebSocket port).
 
 ---
 
