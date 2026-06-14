@@ -43,3 +43,6 @@ app-example
 # VitePress
 docs/.vitepress/dist
 docs/.vitepress/cache
+
+# direnv
+.direnv/
