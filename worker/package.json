@@ -1,11 +1,11 @@
 {
   "name": "cryptolens-proxy",
-  "version": "0.2.4",
+  "version": "0.3.2",
   "private": true,
   "module": "worker.ts",
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20250224.0",
-    "typescript": "~5.9.2",
+    "typescript": "~6.0.3",
     "wrangler": "^4.90.0"
   },
   "dependencies": {
