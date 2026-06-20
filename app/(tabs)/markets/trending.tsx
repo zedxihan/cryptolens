@@ -15,6 +15,7 @@ export default function TrendingScreen() {
         onCoinPress={(coin) => {
           console.log(coin.symbol);
         }}
+        initialSort={{ field: 'total_volume' }}
       />
     </View>
   );

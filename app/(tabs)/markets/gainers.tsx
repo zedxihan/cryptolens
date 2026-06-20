@@ -15,6 +15,7 @@ export default function GainersScreen() {
         onCoinPress={(coin) => {
           console.log(coin.symbol);
         }}
+        initialSort={{ field: 'price_change_percentage_24h' }}
       />
     </View>
   );

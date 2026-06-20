@@ -14,6 +14,7 @@ export default function Top100Screen() {
         onCoinPress={(coin) => {
           console.log(coin.symbol);
         }}
+        initialSort={{ field: 'market_cap' }}
       />
     </View>
   );
