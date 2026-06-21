@@ -54,7 +54,7 @@ export default function AreaChart({
   if (!engine || plotW <= 0)
     return (
       <View
-        className="min-h-[220px] flex-1"
+        className="min-h-55 flex-1"
         onLayout={(e) => setPlotW(e.nativeEvent.layout.width - YW)}
       />
     );
@@ -153,7 +153,7 @@ export default function AreaChart({
 
         {active && (
           <Animated.View
-            className="bg-surface absolute min-w-[135px] rounded-lg border border-[rgba(148,255,214,0.18)] p-3 shadow-lg"
+            className="bg-surface absolute min-w-34 rounded-lg border border-[rgba(148,255,214,0.18)] p-3 shadow-lg"
             style={{
               transform: [{ translateX: animX }, { translateY: animY }],
             }}

@@ -119,7 +119,7 @@ export default function EtfFlowCard() {
       </View>
 
       <View
-        className="min-h-[90px] flex-1 justify-center"
+        className="min-h-22.5 flex-1 justify-center"
         onLayout={(e) => setCardWidth(e.nativeEvent.layout.width)}
       >
         {isLoading || !Array.isArray(data) ? (

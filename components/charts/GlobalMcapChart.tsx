@@ -63,7 +63,7 @@ export default function GlobalMcapChart() {
         </View>
       </View>
 
-      <View className="h-[250px] w-full justify-center">
+      <View className="h-70 w-full justify-center">
         {isLoading ? (
           <ActivityIndicator size="large" color="#29d18b" />
         ) : (

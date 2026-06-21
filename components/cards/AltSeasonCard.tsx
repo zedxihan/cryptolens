@@ -9,7 +9,7 @@ export default function AltseasonCard() {
   const score = clamp(altSeason?.value ?? 0, 0, 100);
 
   return (
-    <View className="border-border-2 bg-surface-2 min-h-[110px] flex-1 rounded-xl border p-3">
+    <View className="border-border-2 bg-surface-2 min-h-27.5 flex-1 rounded-xl border p-3">
       <View className="mb-2 flex-row items-center justify-between">
         <Text className="font-psemibold text-muted text-sm">
           AltSeason Index
