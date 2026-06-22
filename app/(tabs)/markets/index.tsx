@@ -11,9 +11,6 @@ export default function Top100Screen() {
         coins={coins}
         isFetching={isFetching}
         isError={isError}
-        onCoinPress={(coin) => {
-          console.log(coin.symbol);
-        }}
         initialSort={{ field: 'market_cap' }}
       />
     </View>

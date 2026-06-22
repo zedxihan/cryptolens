@@ -37,7 +37,7 @@ const STABLECOINS = new Set([
 ]);
 
 const POPULAR_MAP = [
-  { symbol: 'PAXG', name: 'PAXG', cgId: 'pax-gold' },
+  { symbol: 'XAUT', name: 'XAUT', cgId: 'tether-gold' },
   { symbol: 'XRP', name: 'XRP', cgId: 'ripple' },
   { symbol: 'BNB', name: 'BNB', cgId: 'binancecoin' },
   { symbol: 'SOL', name: 'Solana', cgId: 'solana' },

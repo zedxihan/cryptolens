@@ -9,9 +9,6 @@ id = "8ebf3ca78d844427bfd6588463a97fb4"
 [observability]
 enabled = true
 
-[observability.logs]
-invocation_logs = true
-
 [[analytics_engine_datasets]]
 binding = "ANALYTICS"
 dataset = "cryptolens_users"

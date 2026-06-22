@@ -1,11 +1,5 @@
-import { readFileSync } from 'fs';
-import { resolve } from 'path';
 import { defineConfig } from 'vitepress';
-
-// Read version from package.json dynamically
-const version = JSON.parse(
-  readFileSync(resolve(process.cwd(), 'package.json'), 'utf-8'),
-).version;
+import { version } from '../../package.json';
 
 export default defineConfig({
   title: 'CryptoLens',
