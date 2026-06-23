@@ -17,9 +17,6 @@ export default function CoinCard({ coin }: CoinCardProps) {
     price_change_percentage_24h,
     sparkline_in_1d,
   } = coin;
-  const sparklineData = sparkline_in_1d?.price ?? [];
-  const isPositive = price_change_percentage_24h >= 0;
-
   return (
     <View className="border-border-2 bg-surface-2 rounded-xl border p-3">
       <View className="flex-row items-center justify-between">
@@ -50,8 +47,8 @@ export default function CoinCard({ coin }: CoinCardProps) {
 
         <View className="h-12 w-18 items-end justify-center">
           <SparklineCell
-            data={sparklineData}
-            isPositive={isPositive}
+            data={sparkline_in_1d?.price ?? []}
+            isPositive={price_change_percentage_24h >= 0}
             strokeWidth={1.75}
           />
         </View>

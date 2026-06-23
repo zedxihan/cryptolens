@@ -14,7 +14,7 @@ export default function DominanceCard() {
         <ChevronRight size={18} color="#5f7d73" />
       </View>
 
-      <View className="min-h-[64px] justify-center gap-4">
+      <View className="min-h-16 justify-center gap-4">
         {isLoading ? (
           <ActivityIndicator color="#29d18b" />
         ) : (

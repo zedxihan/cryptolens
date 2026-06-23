@@ -27,7 +27,9 @@ CryptoLens consists of two main components:
 ## 📋 Prerequisites
 
 ### ❄️ The Nix Way (Recommended)
+
 If you use **Nix**, the development environment is fully configured in the repository.
+
 - **Nix** with flakes enabled (see [Nix installation guide](https://nixos.org/download/)).
 - **direnv** (optional, for automatic environment loading).
 - **Expo Go** app (installed on your Android/iOS device for testing).
@@ -35,7 +37,9 @@ If you use **Nix**, the development environment is fully configured in the repos
 Simply run `direnv allow` (or `nix develop`) in the root directory to automatically load the correct versions of **Bun**, **Node.js (v22)**, and all development tools.
 
 ### 🛠️ The Manual Way
+
 If you are not using Nix, you can **safely ignore** the `flake.nix` and `.envrc` files (there is no need to delete them; they will not affect your workflow). Ensure you have the following installed manually on your local machine:
+
 - **Node.js** (v18 or higher recommended)
 - **Bun** (highly recommended package manager and runtime)
 - **Git**

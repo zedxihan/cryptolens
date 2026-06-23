@@ -22,7 +22,6 @@ export default function MarketsTabLayout() {
             shadowOpacity: 0,
             borderBottomWidth: 0,
           },
-          tabBarScrollEnabled: true,
           tabBarItemStyle: {
             width: 'auto',
             paddingHorizontal: 4,
@@ -34,7 +33,6 @@ export default function MarketsTabLayout() {
           tabBarActiveTintColor: '#d8f1e7',
           tabBarInactiveTintColor: '#5f7d73',
           tabBarIndicatorStyle: {
-            height: 0,
             display: 'none',
           },
           tabBarLabelStyle: {

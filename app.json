@@ -2,7 +2,7 @@
   "expo": {
     "name": "CryptoLens",
     "slug": "cryptolens",
-    "version": "0.3.2",
+    "version": "0.3.3",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "cryptolens",
@@ -17,11 +17,18 @@
         "backgroundColor": "#060c0a"
       },
       "package": "com.zedxihan.cryptolens",
-      "versionCode": 5,
+      "versionCode": 6,
       "predictiveBackGestureEnabled": false
     },
     "plugins": [
-      "expo-router",
+      [
+        "expo-router",
+        {
+          "asyncRoutes": {
+            "android": true
+          }
+        }
+      ],
       [
         "expo-splash-screen",
         {
@@ -38,15 +45,7 @@
       "expo-image",
       "expo-web-browser",
       "./plugins/withSeparateBuilds",
-      "expo-status-bar",
-      [
-        "expo-build-properties",
-        {
-          "android": {
-            "usePrecompiledHeaders": true
-          }
-        }
-      ]
+      "expo-status-bar"
     ],
     "experiments": {
       "typedRoutes": true,

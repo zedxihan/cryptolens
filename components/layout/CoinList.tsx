@@ -24,7 +24,7 @@ interface CoinListProps {
   isFetching?: boolean;
   isError?: boolean;
   onCoinPress?: (coin: ListCoin) => void;
-  initialSort?: Sort;
+  initialSort?: { field: SortField; order?: 'asc' | 'desc' };
 }
 
 const SortBtn = memo(function SortBtn({
@@ -65,10 +65,13 @@ export function CoinList({
   isFetching,
   isError,
   onCoinPress,
-  initialSort = { field: 'market_cap', order: 'desc' },
+  initialSort = { field: 'market_cap' },
 }: CoinListProps) {
   const insets = useSafeAreaInsets();
-  const [sort, setSort] = useState<Sort>(initialSort);
+  const [sort, setSort] = useState<Sort>({
+    field: initialSort.field,
+    order: initialSort.order ?? 'desc',
+  });
 
   const sortedIndices = useMemo(
     () =>

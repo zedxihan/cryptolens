@@ -6,7 +6,7 @@ import { FormattedEtfFlow } from '@/services/types';
 import { formatCompact } from '@/utils/format';
 import { FlashList } from '@shopify/flash-list';
 import { ChevronRight } from 'lucide-react-native';
-import { memo, useMemo, useState } from 'react';
+import { memo, useState } from 'react';
 import { ActivityIndicator, Text, View } from 'react-native';
 
 const EtfFlowSlide = memo(function EtfFlowSlide({
@@ -91,16 +91,12 @@ export default function EtfFlowCard() {
     if (width > 0) setActiveIndex(Math.round(x / width));
   };
 
-  // Time
-  const fetchedTime = useMemo(() => {
-    const timestamp = data?.[0]?.fetchedAt;
-    if (!timestamp) return null;
-
-    return new Date(timestamp).toLocaleTimeString('en-US', {
-      hour: 'numeric',
-      hour12: true,
-    });
-  }, [data]);
+  const fetchedTime = data?.[0]?.fetchedAt
+    ? new Date(data[0].fetchedAt).toLocaleTimeString('en-US', {
+        hour: 'numeric',
+        hour12: true,
+      })
+    : null;
 
   return (
     <View className="border-border-2 bg-surface-2 flex-1 rounded-xl border p-3">
@@ -119,7 +115,7 @@ export default function EtfFlowCard() {
       </View>
 
       <View
-        className="min-h-[90px] flex-1 justify-center"
+        className="min-h-22.5 flex-1 justify-center"
         onLayout={(e) => setCardWidth(e.nativeEvent.layout.width)}
       >
         {isLoading || !Array.isArray(data) ? (

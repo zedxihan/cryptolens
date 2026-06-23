@@ -54,7 +54,7 @@ export default function AreaChart({
   if (!engine || plotW <= 0)
     return (
       <View
-        className="min-h-[220px] flex-1"
+        className="min-h-55 flex-1"
         onLayout={(e) => setPlotW(e.nativeEvent.layout.width - YW)}
       />
     );
@@ -90,7 +90,7 @@ export default function AreaChart({
   return (
     <View className="w-full flex-1">
       <View style={{ height: H + 30 }} {...pan.panHandlers}>
-        <Svg width={plotW + YW} height={H + 30}>
+        <Svg width={plotW + YW} height={H}>
           <Defs>
             <LinearGradient id={gradId} x1="0" y1="0" x2="0" y2="1">
               <Stop offset="5%" stopColor={accentColor} stopOpacity={0.32} />
@@ -118,18 +118,6 @@ export default function AreaChart({
               {fmtV(v)}
             </SvgText>
           ))}
-          {engine.xL.map((l: any, i: number) => (
-            <SvgText
-              key={`x-${i}`}
-              x={engine.xSc(l.pt.t)}
-              y={H + 20}
-              fill={L_CLR}
-              fontSize={11}
-              textAnchor={l.a}
-            >
-              {fmtD(l.pt.t)}
-            </SvgText>
-          ))}
 
           {active && (
             <>
@@ -151,9 +139,31 @@ export default function AreaChart({
           )}
         </Svg>
 
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            width: plotW,
+            marginTop: 8,
+          }}
+        >
+          {engine.xL.map((l: any, i: number) => (
+            <Text
+              key={`x-${i}`}
+              className="font-pregular"
+              style={{
+                color: L_CLR,
+                fontSize: 11,
+              }}
+            >
+              {fmtD(l.t)}
+            </Text>
+          ))}
+        </View>
+
         {active && (
           <Animated.View
-            className="bg-surface absolute min-w-[135px] rounded-lg border border-[rgba(148,255,214,0.18)] p-3 shadow-lg"
+            className="bg-surface absolute min-w-34 rounded-lg border border-[rgba(148,255,214,0.18)] p-3 shadow-lg"
             style={{
               transform: [{ translateX: animX }, { translateY: animY }],
             }}
@@ -214,8 +224,7 @@ function calcEngine(data: any[], key: string, w: number, h: number) {
         .y1((d) => ySc(d.v))
         .curve(d3.curveMonotoneX)(pts) || '',
     xL: [0, 1, 2, 3, 4].map((i) => ({
-      pt: pts[Math.round((i * (pts.length - 1)) / 4)],
-      a: i === 0 ? 'start' : i === 4 ? 'end' : ('middle' as const),
+      t: pts[0].t + ((pts[pts.length - 1].t - pts[0].t) * i) / 4,
     })),
     yL: [0, 1, 2, 3, 4].map((i) => yMin + ((yMax - yMin) * i) / 4),
   };
